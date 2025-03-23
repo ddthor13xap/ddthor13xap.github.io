@@ -1,6 +1,11 @@
 // Initialize EmailJS
 (function() {
-    emailjs.init("CcXwTjQk39rDIO1-x"); // Fixed missing quote
+    try {
+        emailjs.init("CcXwTjQk39rDIO1-x");
+        console.log("EmailJS initialized successfully");
+    } catch (error) {
+        console.error("EmailJS initialization error:", error);
+    }
 })();
 
 // Get the form element
@@ -19,6 +24,9 @@ form.addEventListener('submit', function(e) {
     entry.innerHTML = `<strong>${name}</strong>: ${message}`;
     entriesList.appendChild(entry);
 
+    // Show loading state
+    alert("Sending message...");
+
     // Send email notification
     emailjs.send("service_wfbguvk", "template_q6p6jlw", {
         name: name,
@@ -27,9 +35,11 @@ form.addEventListener('submit', function(e) {
     }).then(
         function(response) {
             console.log("SUCCESS", response);
+            alert("Message sent successfully!");
         },
         function(error) {
-            console.log("FAILED", error);
+            console.error("FAILED", error);
+            alert("Failed to send message: " + error.text);
         }
     );
 
