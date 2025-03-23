@@ -1,0 +1,72 @@
+body {
+    background: linear-gradient(to right, rgb(109, 21, 109), rgb(16, 16, 230));
+    color: white;
+    font-family: 'Comic Sans MS', 'Chalkboard SE', 'Marker Felt', cursive, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    text-shadow: 1px 1px 5px black;
+}
+
+.container {
+    width: 80%;
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+input, textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #ff9933;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px black;
+    font-size: 16px;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+button:hover {
+    background-color: #cc7722;
+}
+
+#guestBookEntries {
+    margin-top: 30px;
+    width: 100%;
+}
+
+#entriesList {
+    list-style: none;
+    padding: 0;
+}
+
+#entriesList li {
+    background-color: rgba(0, 0, 0, 0.3);
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: left;
+}
