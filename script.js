@@ -1,6 +1,6 @@
 // Initialize EmailJS
 (function() {
-    emailjs.init("YOUR_PUBLIC_KEY"); // You'll need to replace this with your actual public key
+    emailjs.init("CcXwTjQk39rDIO1-x"); // Fixed missing quote
 })();
 
 // Get the form element
