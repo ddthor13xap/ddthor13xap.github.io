@@ -20,9 +20,9 @@ form.addEventListener('submit', function(e) {
     entriesList.appendChild(entry);
 
     // Send email notification
-    emailjs.send("default_service", "template_id", {
-        to_email: "ddouglass1313@gmail.com",
-        from_name: name,
+    emailjs.send("service_wfbguvk", "template_q6p6jlw", {
+        name: name,
+        email: "ddouglass1313@gmail.com",
         message: message,
     }).then(
         function(response) {
